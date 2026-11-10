@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Holidays — Экскурсии и Оздоровление в Беларуси</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="header">
+        <a href="#" class="logo">
+            <span class="logo-icon"></span>
+            FAMILY HOLIDAYS
+        </a>
+        
+        <nav class="nav">
+            <a href="#excursions" class="nav-link">Экскурсии по Беларуси</a>
+            <a href="#wellness" class="nav-link">Оздоровление</a>
+            <a href="#about" class="nav-link">О компании</a>
+            <a href="#reviews" class="nav-link">Отзывы</a> 
+            <a href="#contacts" class="nav-link">Контакты</a>
+        </nav>
+
+        <div class="header-actions">
+            <a href="tel:+375290000000" class="phone">+375 (29) 000-00-00</a>
+            <button class="callback-btn" id="openModal">Заказать звонок</button>
+        </div>
+    </header>
+
+    <!-- Главный экран -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Откройте Беларусь заново</h1>
+            <p class="hero-subtitle">Авторские экскурсионные программы и премиальный отдых с заботой о вашем здоровье.</p>
+            <a href="#excursions" class="hero-btn">Выбрать программу</a>
+        </div>
+    </section>
+
+      <!-- БЛОК: ЭКСКУРСИОННЫЕ ПРОГРАММЫ -->
+      <section class="programs" id="excursions">
+        <div class="container">
+            <h2 class="section-title">Экскурсионные программы</h2>
+            
+            <div class="programs-grid">
+                <!-- Карточка 1 -->
+                <div class="card">
+                    <div class="card-image-wrap">
+                        <img src="https://unsplash.com" alt="" class="card-img">
+                        <span class="badge">Исторические туры</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Классические маршруты по Беларуси</h3>
+                        <p class="card-text">Экскурсии по знаковым местам: Могилёв, Буйничское поле, Мирский и Несвижский замки. Полное сопровождение профессиональных гидов.</p>
+                        <button class="more-btn" data-info="classic">Узнать подробнее</button>
+                    </div>
+                </div>
+
+                <!-- Карточка 2 -->
+                <div class="card">
+                    <div class="card-image-wrap">
+                        <img src="https://unsplash.com" alt="" class="card-img">
+                        <span class="badge">Индивидуальные</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Школьные и корпоративные программы</h3>
+                        <p class="card-text">Комфортные поездки на современных автобусах с посещением историко-культурного комплекса «Линия Сталина» и этнографических комплексов.</p>
+                        <button class="more-btn" data-info="corporate">Узнать подробнее</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОП-АП ОКНО С ДОПОЛНИТЕЛЬНОЙ ИНФОРМАЦИЕЙ -->
+    <div class="modal" id="infoModal">
+        <div class="modal-content info-content-box">
+            <button class="modal-close" id="closeInfoModal">&times;</button>
+            <h3 class="modal-title" id="infoModalTitle">Название программы</h3>
+            
+            <div class="info-modal-body">
+                <div class="info-specs" id="infoModalSpecs">
+                    <!-- Характеристики подставятся из JS -->
+                </div>
+                <div class="info-list-wrapper">
+                    <p class="info-list-title" id="infoModalListTitle">В программу входит:</p>
+                    <ul class="info-bullets" id="infoModalList">
+                        <!-- Пункты программы подставятся из JS -->
+                    </ul>
+                </div>
+            </div>
+            
+            <button class="hero-btn to-callback-btn" id="infoToCallback">Оставить заявку на тур</button>
+        </div>
+    </div>
+
+    
+
+    <!-- БЛОК: ОЗДОРОВЛЕНИЕ И ИНФРАСТРУКТУРА -->
+<section class="wellness-section" id="wellness">
+    <div class="container">
+        <h2 class="section-title">Оздоровление и база отдыха</h2>
+        <div class="bento-grid">
+            <div class="bento-item large" style="background-image: url('https://unsplash.com')">
+                <div class="bento-content">
+                    <h3>Медицинский контроль</h3>
+                    <p>Оздоровительные программы и климатотерапия под наблюдением специалистов в экологически чистых районах.</p>
+                    <!-- ВСТАВИЛ КНОПКУ СЮДА -->
+                    <button class="more-btn bento-more-btn" data-info="recovery">Узнать подробнее</button>
+                </div>
+            </div>
+            <div class="bento-item" style="background-image: url('https://unsplash.com')">
+                <div class="bento-content">
+                    <h3>Аквазона</h3>
+                    <p>Современные крытые бассейны и финские оздоровительные сауны.</p>
+                    <!-- ВСТАВИЛ КНОПКУ СЮДА -->
+                    <button class="more-btn bento-more-btn" data-info="aquazone">Узнать подробнее</button>
+                </div>
+            </div>
+            <div class="bento-item" style="background-image: url('https://unsplash.com')">
+                <div class="bento-content">
+                    <h3>Природная среда</h3>
+                    <p>Свежий воздух соснового бора на берегу живописного водохранилища Вяча.</p>
+                    <!-- ВСТАВИЛ КНОПКУ СЮДА -->
+                    <button class="more-btn bento-more-btn" data-info="nature">Узнать подробнее</button>
+                </div>
+            </div>
+            <div class="bento-item wide" style="background-image: url('https://unsplash.com')">
+                <div class="bento-content">
+                    <h3>Здоровое питание</h3>
+                    <p>Сбалансированное и комплексное диетическое меню из натуральных фермерских продуктов.</p>
+                    <!-- ВСТАВИЛ КНОПКУ СЮДА -->
+                    <button class="more-btn bento-more-btn" data-info="nutrition">Узнать подробнее</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+     <!-- БЛОК: О КОМПАНИИ -->
+     <section class="about-section" id="about">
+        <div class="container about-container">
+            <div class="about-content">
+                <h2 class="about-title">О компании</h2>
+                <p class="about-text">Мы создаем комфортные и продуманные путешествия по всей Беларуси, совмещая культурное просвещение и заботу о здоровье наших клиентов.</p>
+                <p class="about-text">Собственные проверенные маршруты, сертифицированные гиды, современный автопарк и тесное сотрудничество с ведущими оздоровительными комплексами страны позволяют нам гарантировать высокий уровень сервиса для каждой группы.</p>
+            </div>
+            <div class="about-stats">
+                <div class="about-stat-card">
+                    <span class="stat-num">10+ лет</span>
+                    <span class="stat-txt">опыта организации отдыха</span>
+                </div>
+                <div class="about-stat-card">
+                    <span class="stat-num">150+</span>
+                    <span class="stat-txt">авторских экскурсий</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК: ОТЗЫВЫ -->
+    <section class="reviews-section" id="reviews">
+        <div class="container">
+            <h2 class="section-title">Отзывы наших клиентов</h2>
+            <div class="reviews-grid">
+                <!-- Отзыв 1 -->
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <h3 class="review-name">Маргарита</h3>
+                    <p class="review-text">Большое спасибо Наталье за организацию отдыха и прекрасное отношение. Экскурсии очень познавательные, автобусы комфортные, а оздоровительная программа на базе отдыха помогла отлично перезагрузиться!</p>
+                </div>
+                <!-- Отзыв 2 -->
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <h3 class="review-name">Ольга</h3>
+                    <p class="review-text">Организация экскурсионной программы на высшем уровне. Всё четко по таймингу, гид рассказывал потрясающе интересно. Проживание в сосновом бору и чистое сбалансированное питание — именно то, что нужно.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ПОДВАЛ И КОНТАКТЫ -->
+    <footer class="footer" id="contacts">
+        <div class="container footer-container">
+            <div>
+                <h4 style="font-family: var(--font-title); font-size: 22px; margin-bottom: 12px;">FAMILY HOLIDAYS</h4>
+                <p style="opacity: 0.7; font-size: 14px;">Организация экскурсий и оздоровительного отдыха в Беларуси.</p>
+            </div>
+            <div>
+                <p style="font-weight: 500; margin-bottom: 8px;">Контакты</p>
+                <p style="opacity: 0.7; font-size: 14px; margin-bottom: 4px;">Минск, ул. Советская</p>
+                <p style="opacity: 0.7; font-size: 14px;">+375 (29) 000-00-00</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно звонка -->
+    <div class="modal" id="callbackModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <h3 class="modal-title">Обратный звонок</h3>
+            <form class="modal-form">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="tel" placeholder="+375 (XX) XXX-XX-XX" required>
+                <button type="submit" class="hero-btn" style="width: 100%; border: none;">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Помощник -->
+        <!-- ИНТЕРАКТИВНЫЙ ПОМОЩНИК (ПОЛНОСТЬЮ ИСПРАВЛЕННЫЙ) -->
+        <div class="assistant-widget" id="assistantWidget">
+            <button class="assistant-badge" id="toggleAssistant">
+                <span class="pulse-dot"></span>
+                Менеджер сайта
+            </button>
+            
+            <div class="assistant-chat" id="assistantChat">
+                <div class="chat-header">
+                    <div class="chat-user-info">
+                        <div class="chat-avatar">Н</div>
+                        <div>
+                            <div class="chat-name">Наталья</div>
+                            <div class="chat-status">Онлайн-консультант</div>
+                        </div>
+                    </div>
+                    <button class="chat-close" id="closeAssistant">&times;</button>
+                </div>
+                
+                <div class="chat-body" id="chatBody">
+                    <!-- Каждая фраза теперь строго в своем аккуратном облачке -->
+                    <div class="msg bot-msg">Здравствуйте! Рада видеть вас на нашем сайте.</div>
+                    <div class="msg bot-msg">Какой отдых вы ищете?</div>
+                </div>
+                
+                <div class="chat-options" id="chatOptions">
+                    <button class="option-btn" data-reply="Интересуют экскурсии по Беларуси">Экскурсии по Беларуси</button>
+                    <button class="option-btn" data-reply="Как устроено оздоровление?">Оздоровление и отдых</button>
+                </div>
+            </div>
+        </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
+
