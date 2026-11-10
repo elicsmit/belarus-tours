@@ -283,45 +283,70 @@ body {
     gap: 24px;
 }
 
+/* Изменили: Убрали убогий серый фон, сделали чистые белые плашки с рамкой */
 .bento-item {
     position: relative;
     border-radius: 6px;
     overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-color: #E2E8F0;
+    background-color: var(--white); /* Белый фон */
+    border: 1px solid #E2E8F0; /* Аккуратная тонкая рамка */
     display: flex;
     align-items: flex-end;
     padding: 32px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02); /* Легкая тень */
 }
 
+/* УДАЛИЛИ ГРЯЗНЫЙ ГРАДИЕНТ ИЗ ::before */
 .bento-item::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(0deg, rgba(28, 35, 32, 0.85) 0%, rgba(28, 35, 32, 0) 100%);
-    z-index: 1;
+    display: none;
 }
 
 .bento-item.large { grid-row: span 2; }
 .bento-item.wide { grid-column: span 2; }
 
+/* Изменили: Добавили flex для правильного выравнивания контента */
 .bento-content {
     position: relative;
     z-index: 2;
-    color: var(--white);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Изменили: Поменяли цвет заголовка на наш благородный хвойный */
 .bento-content h3 {
     font-family: var(--font-title);
     font-size: 24px;
-    margin-bottom: 8px;
+    color: var(--text-main); /* Почти черный с зеленым подтоном */
+    margin-bottom: 10px;
 }
 
+/* Изменили: Сделали описание читаемым шалфейным цветом */
 .bento-content p {
-    font-size: 14px;
-    opacity: 0.9;
+    font-size: 14.5px;
+    color: var(--text-muted); /* Шалфейно-серый #606C66 */
     max-width: 440px;
+    line-height: 1.5;
+}
+
+/* Добавили: Тонкая настройка кнопки "Узнать подробнее" внутри Bento */
+.bento-content .more-btn {
+    margin-top: 20px;
+    max-width: 180px;
+    padding: 12px 20px;
+    font-size: 14px;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+    text-align: center;
+}
+
+.bento-content .more-btn:hover {
+    background-color: #2a634f;
 }
 
 /* Подвал */
@@ -783,8 +808,22 @@ body {
     }
     
     /* Сбрасываем Bento-сетку оздоровления в аккуратный вертикальный список */
-    .bento-grid { grid-template-columns: 1fr; grid-auto-rows: auto; gap: 20px; }
-    .bento-item { height: 240px; padding: 24px; }
+    .bento-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        gap: 20px;
+    }
+    .bento-item {
+        height: auto; /* Карточка сама подстроится под высоту текста, не будет сжатой */
+        padding: 28px 20px;
+    }
+    .bento-item.large, .bento-item.wide {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    .bento-content h3 {
+        font-size: 22px;
+    }
     .bento-item.large, .bento-item.wide { grid-column: auto; grid-row: auto; }
     
     .programs, .wellness-section, .about-section, .reviews-section { padding: 60px 0; }
