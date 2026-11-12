@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оздоровление и санатории Беларуси — Family Holidays</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=1.2.0">
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">
+            <span class="logo-icon"></span>
+            FAMILY HOLIDAYS
+        </a>
+        
+        <nav class="nav">
+            <a href="kids.html" class="nav-link">Детский отдых 2027</a>
+            <a href="wellness.html" class="nav-link" style="color: var(--secondary);">Оздоровление</a>
+            <a href="excursions.html" class="nav-link">Экскурсии</a>
+            <a href="index.html#about" class="nav-link">О компании</a>
+            <a href="#contacts" class="nav-link">Контакты</a>
+        </nav>
+
+        <div class="header-actions">
+            <a href="tel:+375290000000" class="phone">+375 (29) 000-00-00</a>
+            <button class="callback-btn" id="openModal">Заказать звонок</button>
+        </div>
+    </header>
+
+    <section class="page-banner" style="background-image: url('img/slide2.jpg');">
+        <div class="container page-banner-content">
+            <div class="breadcrumbs"><a href="index.html">Главная</a> / Оздоровление и семейный отдых</div>
+            <h1 class="page-banner-title">Оздоровление и санатории Беларуси</h1>
+            <p class="page-banner-subtitle">Санаторно-курортное лечение, климатотерапия в сосновых борах и комфортный семейный отдых на берегу озер.</p>
+        </div>
+    </section>
+
+
+    <section class="programs" id="sanatoriums" style="padding: 80px 0;">
+        <div class="container">
+            <h2 class="section-title" style="margin-bottom: 20px;">Каталог здравниц и центров оздоровления</h2>
+            <p style="text-align: center; color: var(--text-muted); max-width: 680px; margin: 0 auto 40px auto;">
+                Проверенные комплексы Беларуси с лечебной базой, бассейнами и сбалансированным питанием.
+            </p>
+
+            <div class="filter-tabs" id="regionFilters">
+                <button class="filter-tab active" data-region="all">Все области (10)</button>
+                <button class="filter-tab" data-region="vitebsk">Витебская</button>
+                <button class="filter-tab" data-region="gomel">Гомельская</button>
+                <button class="filter-tab" data-region="minsk">Минская</button>
+                <button class="filter-tab" data-region="brest">Брестская</button>
+                <button class="filter-tab" data-region="mogilev">Могилевская</button>
+            </div>
+
+            <div class="programs-grid">
+                
+                <div class="card sanatorium-card" data-region="vitebsk">
+                    <div class="card-image-wrap">
+                        <div class="card-slider">
+                            <img src="img/zhemchuzhina-1.jpg" alt="" class="card-slide-img active">
+                            <img src="img/zhemchuzhina-2.jpg" alt="" class="card-slide-img">
+                            <img src="img/zhemchuzhina-3.jpg" alt="" class="card-slide-img">
+                            <img src="img/zhemchuzhina-4.jpg" alt="" class="card-slide-img">
+                            <img src="img/zhemchuzhina-5.jpg" alt="" class="card-slide-img">
+                            <img src="img/zhemchuzhina-6.jpg" alt="" class="card-slide-img">
+                            <button type="button" class="card-slider-btn prev">&#10094;</button>
+                            <button type="button" class="card-slider-btn next">&#10095;</button>
+                            <span class="card-photo-counter">1 / 6</span>
+                        </div>
+                        <span class="badge">Витебская обл. • от 3 960 ₽/сут</span>
+                    </div>
+                    <div class="card-content">
+                        <div>
+                            <h3 class="card-title">ДРОЦ «Жемчужина»</h3>
+                            <p class="card-text">Берег озера Щибот рядом с Березинским заповедником. Песчаный пляж, бассейн, галотерапия, 6-разовое питание.</p>
+                        </div>
+                        <button class="more-btn" data-camp="zhemchuzhina">Подробнее о базе</button>
+                    </div>
+                </div>
+                
+                <div class="card sanatorium-card" data-region="mogilev">
+                    <div class="card-image-wrap">
+                        <div class="card-slider">
+                            <img src="img/svisloch-1.jpg" alt="" class="card-slide-img active">
+                            <img src="img/svisloch-2.jpg" alt="" class="card-slide-img">
+                            <img src="img/svisloch-3.jpg" alt="" class="card-slide-img">
+                            <img src="img/svisloch-4.jpg" alt="" class="card-slide-img">
+                            <img src="img/svisloch-5.jpg" alt="" class="card-slide-img">
+                            <img src="img/svisloch-6.jpg" alt="" class="card-slide-img">
+                            <button type="button" class="card-slider-btn prev">&#10094;</button>
+                            <button type="button" class="card-slider-btn next">&#10095;</button>
+                            <span class="card-photo-counter">1 / 6</span>
+                        </div>
+                        <span class="badge">Могилевская обл. • от 3 600 ₽/сут</span>
+                    </div>
+                    <div class="card-content">
+                        <div>
+                            <h3 class="card-title">Санаторий «Свислочь»</h3>
+                            <p class="card-text">Слияние рек Березина и Свислочь. Грязелечебница, бассейн, галотерапия, минеральная вода, 6-разовое питание.</p>
+                        </div>
+                        <button class="more-btn" data-camp="svisloch">Подробнее о базе</button>
+                    </div>
+                </div>
+                
+                <div class="card sanatorium-card" data-region="vitebsk">
+                    <div class="card-image-wrap">
+                        <div class="card-slider">
+                            <img src="img/vetraz-1.jpg" alt="" class="card-slide-img active">
+                            <img src="img/vetraz-2.jpg" alt="" class="card-slide-img">
+                            <img src="img/vetraz-3.jpg" alt="" class="card-slide-img">
+                            <img src="img/vetraz-4.jpg" alt="" class="card-slide-img">
+                            <img src="img/vetraz-5.jpg" alt="" class="card-slide-img">
+                            <img src="img/vetraz-6.jpg" alt="" class="card-slide-img">
+                            <button type="button" class="card-slider-btn prev">&#10094;</button>
+                            <button type="button" class="card-slider-btn next">&#10095;</button>
+                            <span class="card-photo-counter">1 / 6</span>
+                        </div>
+                        <span class="badge">Витебская обл. • от 2 510 ₽/сут</span>
+                    </div>
+                    <div class="card-content">
+                        <div>
+                            <h3 class="card-title">ОДРОЦ «Ветразь»</h3>
+                            <p class="card-text">Белорусское поозерье, пляж на озере. Водолечебница, физиотерапия, массаж, аромафитотерапия, 6-разовое питание.</p>
+                        </div>
+                        <button class="more-btn" data-camp="vetraz">Подробнее о базе</button>
+                    </div>
+                </div>
+                
+                <div class="card sanatorium-card" data-region="brest">
+                    <div class="card-image-wrap">
+                        <div class="card-slider">
+                            <img src="img/kolos-1.jpg" alt="" class="card-slide-img active">
+                            <img src="img/kolos-2.jpg" alt="" class="card-slide-img">
+                            <img src="img/kolos-3.jpg" alt="" class="card-slide-img">
+                            <img src="img/kolos-4.jpg" alt="" class="card-slide-img">
+                            <img src="img/kolos-5.jpg" alt="" class="card-slide-img">
+                            <img src="img/kolos-6.jpg" alt="" class="card-slide-img">
+                            <button type="button" class="card-slider-btn prev">&#10094;</button>
+                            <button type="button" class="card-slider-btn next">&#10095;</button>
+                            <span class="card-photo-counter">1 / 6</span>
+                        </div>
+                        <span class="badge">Брестская обл. • от 3 170 ₽/сут</span>
+                    </div>
+                    <div class="card-content">
+                        <div>
+                            <h3 class="card-title">ДРОЦ «Колос»</h3>
+                            <p class="card-text">Хвойный лес «Сосновый бор» у р. Мухавец. Теплый открытый бассейн, стадион, галотерапия, трансфер от Жабинки включен.</p>
+                        </div>
+                        <button class="more-btn" data-camp="kolos">Подробнее о базе</button>
+                    </div>
+                </div>
+                
+                <div class="card sanatorium-card" data-region="gomel">
+                    <div class="card-image-wrap">
+                        <div class="card-slider">
+                            <img src="img/praleska-1.jpg" alt="" class="card-slide-img active">
+                            <img src="img/praleska-2.jpg" alt="" class="card-slide-img">
+                            <img src="img/praleska-3.jpg" alt="" class="card-slide-img">
+                            <img src="img/praleska-4.jpg" alt="" class="card-slide-img">
+                            <img src="img/praleska-5.jpg" alt="" class="card-slide-img">
+                            <img src="img/praleska-6.jpg" alt="" class="card-slide-img">
+                            <button type="button" class="card-slider-btn prev">&#10094;</button>
+                            <button type="button" class="card-slider-btn next">&#10095;</button>
+                            <span class="card-photo-counter">1 / 6</span>
+                        </div>
+                        <span class="badge">Гомельская обл. • от 3 060 ₽/сут</span>
+                    </div>
+                    <div class="card-content">
+                        <div>
+                            <h3 class="card-title">ДРОЦ «Пралеска»</h3>
+                            <p class="card-text">Сосновый лес на берегу р. Днепр. Открытый и закрытый бассейны, физиотерапия, рядом аквапарк, трансфер из Жлобина включен.</p>
+                        </div>
+                        <button class="more-btn" data-camp="praleska">Подробнее о базе</button>
+                    </div>
+                </div>
+
+                <div class="card sanatorium-card" data-region="gomel">
+                    <div class="card-image-wrap">
+                        <div class="card-slider">
+                            <img src="img/sidelniki-1.jpg" alt="" class="card-slide-img active">
+                            <img src="img/sidelniki-2.jpg" alt="" class="card-slide-img">
+                            <img src="img/sidelniki-3.jpg" alt="" class="card-slide-img">
+                            <img src="img/sidelniki-4.jpg" alt="" class="card-slide-img">
+                            <img src="img/sidelniki-5.jpg" alt="" class="card-slide-img">
+                            <img src="img/sidelniki-6.jpg" alt="" class="card-slide-img">
+                            <button type="button" class="card-slider-btn prev">&#10094;</button>
+                            <button type="button" class="card-slider-btn next">&#10095;</button>
+                            <span class="card-photo-counter">1 / 6</span>
+                        </div>
+                        <span class="badge">Гомельская обл. • от 3 600 ₽/сут</span>
+                    </div>
+                    <div class="card-content">
+                        <div>
+                            <h3 class="card-title">ДРОЦ «Сидельники»</h3>
+                            <p class="card-text">Полесье, берег р. Припять. Мощная медбаза (грязелечение, водолечение, ингаляторий, стоматология, УЗИ), крытый бассейн.</p>
+                        </div>
+                        <button class="more-btn" data-camp="sidelniki">Подробнее о базе</button>
+                    </div>
+                </div>
+                
+                <div class="card sanatorium-card" data-region="gomel">
+                    <div class="card-image-wrap">
+                        <div class="card-slider">
+                            <img src="img/romantika-1.jpg" alt="" class="card-slide-img active">
+                            <img src="img/romantika-2.jpg" alt="" class="card-slide-img">
+                            <img src="img/romantika-3.jpg" alt="" class="card-slide-img">
+                            <img src="img/romantika-4.jpg" alt="" class="card-slide-img">
+                            <img src="img/romantika-5.jpg" alt="" class="card-slide-img">
+                            <img src="img/romantika-6.jpg" alt="" class="card-slide-img">
+                            <button type="button" class="card-slider-btn prev">&#10094;</button>
+                            <button type="button" class="card-slider-btn next">&#10095;</button>
+                            <span class="card-photo-counter">1 / 6</span>
+                        </div>
+                        <span class="badge">Гомельская обл. • от 2 095 ₽/сут</span>
+                    </div>
+                    <div class="card-content">
+                        <div>
+                            <h3 class="card-title">ДРОЦ «Романтика-Люкс»</h3>
+                            <p class="card-text">Сосновый лес на берегу р. Сож (17 км от Гомеля). Водолечебница, галотерапия, массаж, сауна с бассейном, 6-разовое питание.</p>
+                        </div>
+                        <button class="more-btn" data-camp="romantika">Подробнее о базе</button>
+                    </div>
+                </div>
+                
+                <div class="card sanatorium-card" data-region="minsk">
+                    <div class="card-image-wrap">
+                        <div class="card-slider">
+                            <img src="img/sluch-1.jpg" alt="" class="card-slide-img active">
+                            <img src="img/sluch-2.jpg" alt="" class="card-slide-img">
+                            <img src="img/sluch-3.jpg" alt="" class="card-slide-img">
+                            <img src="img/sluch-4.jpg" alt="" class="card-slide-img">
+                            <img src="img/sluch-5.jpg" alt="" class="card-slide-img">
+                            <img src="img/sluch-6.jpg" alt="" class="card-slide-img">
+                            <button type="button" class="card-slider-btn prev">&#10094;</button>
+                            <button type="button" class="card-slider-btn next">&#10095;</button>
+                            <span class="card-photo-counter">1 / 6</span>
+                        </div>
+                        <span class="badge">Минская обл. • от 4 140 ₽/сут</span>
+                    </div>
+                    <div class="card-content">
+                        <div>
+                            <h3 class="card-title">Санаторий «Случь»</h3>
+                            <p class="card-text">Смешанный лес у пруда (8 км от Слуцка). Закрытый бассейн, ЛФК, спелеоклиматолечение, фиточай, 6-разовое питание.</p>
+                        </div>
+                        <button class="more-btn" data-camp="sluch">Подробнее о базе</button>
+                    </div>
+                </div>
+                
+                <div class="card sanatorium-card" data-region="gomel">
+                    <div class="card-image-wrap">
+                        <div class="card-slider">
+                            <img src="img/ptich-1.jpg" alt="" class="card-slide-img active">
+                            <img src="img/ptich-2.jpg" alt="" class="card-slide-img">
+                            <img src="img/ptich-3.jpg" alt="" class="card-slide-img">
+                            <img src="img/ptich-4.jpg" alt="" class="card-slide-img">
+                            <img src="img/ptich-5.jpg" alt="" class="card-slide-img">
+                            <img src="img/ptich-6.jpg" alt="" class="card-slide-img">
+                            <button type="button" class="card-slider-btn prev">&#10094;</button>
+                            <button type="button" class="card-slider-btn next">&#10095;</button>
+                            <span class="card-photo-counter">1 / 6</span>
+                        </div>
+                        <span class="badge">Гомельская обл. • от 3 130 ₽/сут</span>
+                    </div>
+                    <div class="card-content">
+                        <div>
+                            <h3 class="card-title">ДРОЦ «Птичь»</h3>
+                            <p class="card-text">Лесной массив на берегу р. Птичь. ФОК с бассейном, гало- и ароматерапия, кислородный коктейль, экскурсии в Туров и Нацпарк.</p>
+                        </div>
+                        <button class="more-btn" data-camp="ptich">Подробнее о базе</button>
+                    </div>
+                </div>
+                
+                <div class="card sanatorium-card" data-region="minsk">
+                    <div class="card-image-wrap">
+                        <div class="card-slider">
+                            <img src="img/zhdanovichi-1.jpg" alt="" class="card-slide-img active">
+                            <img src="img/zhdanovichi-2.jpg" alt="" class="card-slide-img">
+                            <img src="img/zhdanovichi-3.jpg" alt="" class="card-slide-img">
+                            <img src="img/zhdanovichi-4.jpg" alt="" class="card-slide-img">
+                            <img src="img/zhdanovichi-5.jpg" alt="" class="card-slide-img">
+                            <img src="img/zhdanovichi-6.jpg" alt="" class="card-slide-img">
+                            <button type="button" class="card-slider-btn prev">&#10094;</button>
+                            <button type="button" class="card-slider-btn next">&#10095;</button>
+                            <span class="card-photo-counter">1 / 6</span>
+                        </div>
+                        <span class="badge">Минский р-н • от 3 420 ₽/сут</span>
+                    </div>
+                    <div class="card-content">
+                        <div>
+                            <h3 class="card-title">ДРОЦ «Ждановичи»</h3>
+                            <p class="card-text">Хвойный лес у водохранилища в 3 км от Минска. Бассейн, хамам, сауна, водолечебница, пляж в шаговой доступности, рядом аквапарк.</p>
+                        </div>
+                        <button class="more-btn" data-camp="zhdanovichi">Подробнее о базе</button>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer" id="contacts">
+        <div class="container footer-container">
+            <div>
+                <h4 style="font-family: var(--font-title); font-size: 22px; margin-bottom: 12px;">FAMILY HOLIDAYS</h4>
+                <p style="opacity: 0.7; font-size: 14px;">Организация экскурсий и оздоровительного отдыха в Беларуси.</p>
+            </div>
+            <div>
+                <p style="font-weight: 500; margin-bottom: 8px;">Контакты</p>
+                <p style="opacity: 0.7; font-size: 14px; margin-bottom: 4px;">Минск, ул. Советская</p>
+                <p style="opacity: 0.7; font-size: 14px;">+375 (29) 000-00-00</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="infoModal">
+        <div class="modal-content info-content-box">
+            <button class="modal-close" id="closeInfoModal">&times;</button>
+            <h3 class="modal-title" id="infoModalTitle">Название программы</h3>
+            <div class="info-modal-body">
+                <div class="info-specs" id="infoModalSpecs"></div>
+                <div class="info-list-wrapper">
+                    <p class="info-list-title" id="infoModalListTitle">В программу входит:</p>
+                    <ul class="info-bullets" id="infoModalList"></ul>
+                </div>
+            </div>
+            <button class="hero-btn to-callback-btn" id="infoToCallback">Оставить заявку на тур</button>
+        </div>
+    </div>
+
+    <div class="modal" id="callbackModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <h3 class="modal-title">Обратный звонок</h3>
+            <form class="modal-form">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="tel" placeholder="+375 (XX) XXX-XX-XX" required>
+                <button type="submit" class="hero-btn" style="width: 100%; border: none;">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="assistant-widget" id="assistantWidget">
+        <button class="assistant-badge" id="toggleAssistant">
+            <span class="pulse-dot"></span>
+            Менеджер сайта
+        </button>
+        <div class="assistant-chat" id="assistantChat">
+            <div class="chat-header">
+                <div class="chat-user-info">
+                    <div class="chat-avatar">Н</div>
+                    <div>
+                        <div class="chat-name">Наталья</div>
+                        <div class="chat-status">Онлайн-консультант</div>
+                    </div>
+                </div>
+                <button class="chat-close" id="closeAssistant">&times;</button>
+            </div>
+            <div class="chat-body" id="chatBody">
+                <div class="msg bot-msg">Здравствуйте! Помогу подобрать санаторий или программу оздоровления.</div>
+                <div class="msg bot-msg">Какой профиль лечения или регион вас интересует?</div>
+            </div>
+            <div class="chat-options" id="chatOptions">
+                <button class="option-btn" data-reply="Интересуют экскурсии по Беларуси">Экскурсии по Беларуси</button>
+                <button class="option-btn" data-reply="Как устроено оздоровление?">Оздоровление и отдых</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.filter-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                const region = tab.getAttribute('data-region');
+                document.querySelectorAll('.sanatorium-card').forEach(card => {
+                    if (region === 'all' || card.getAttribute('data-region') === region) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        const campsFullData = {
+            zhemchuzhina: {
+                title: "ДРОЦ «Жемчужина» (Витебская обл.)",
+                specs: [
+                    "<strong>Цена:</strong> 3 960 ₽/сут (индивид.) | 4 150 ₽/сут (группы 1+20)",
+                    "<strong>Возраст и смены:</strong> 8–17 лет, 4 смены по 18 дней (до 50 чел.)",
+                    "<strong>График 2027:</strong> 16.06–03.07, 03.07–20.07, 20.07–06.08, 06.08–23.08",
+                    "<strong>Питание и проживание:</strong> 6-разовое; 2–4-местные номера с удобствами"
+                ],
+                listTitle: "Инфраструктура и лечение:",
+                list: [
+                    "Охраняемый песчаный пляж на оз. Щибот (прокат лодок, сапбордов, катамаранов)",
+                    "Закрытый бассейн, сауна, спортзал 22×10, футбольное поле 90×55, веревочный городок",
+                    "Лечение органов дыхания и ЛОР: гало-, гелио-, ароматерапия, минвода, коктейли",
+                    "Трансфер за доплату (70 ₽/км или 2 300 ₽/час)"
+                ]
+            },
+            svisloch: {
+                title: "Санаторий «Свислочь» (Могилевская обл.)",
+                specs: [
+                    "<strong>Цена:</strong> 3 600 / 3 700 ₽/сут | 3 780 / 3 885 ₽/сут (группы 1+20)",
+                    "<strong>Возраст и смены:</strong> 6–17 лет, 4 смены по 18 дней (100–140 чел.)",
+                    "<strong>График 2027:</strong> 14.06–03.07, 04.07–23.07, 24.07–12.08, 13.08–01.09",
+                    "<strong>Питание и проживание:</strong> 6-разовое; блоки 1+1/2+2 или комнаты 4–5 чел."
+                ],
+                listTitle: "Инфраструктура и лечение:",
+                list: [
+                    "Грязелечебница, стоматология, УЗИ, 5 базовых процедур в путевке",
+                    "Бассейн, спортзал, футбольное поле, кино- и танцзал, школа английского",
+                    "Трансфер в аквапарк «Жемчужина» (Осиповичи) и экскурсия на стеклозавод",
+                    "Бесплатный трансфер от ст. Осиповичи"
+                ]
+            },
+            vetraz: {
+                title: "ОДРОЦ «Ветразь» (Витебская обл.)",
+                specs: [
+                    "<strong>Цена:</strong> 2 510 ₽/сут (индивид.) | 2 635 ₽/сут (группы 1+20)",
+                    "<strong>Возраст и смены:</strong> 9–17 лет, 4 смены по 20 дней (до 60 чел.)",
+                    "<strong>График 2027:</strong> 11.06–30.06, 01.07–20.07, 21.07–09.08, 10.08–29.08",
+                    "<strong>Питание и проживание:</strong> 6-разовое (есть меню для аллергиков); блоки 2+3"
+                ],
+                listTitle: "Инфраструктура и лечение:",
+                list: [
+                    "Оборудованный пляж со спасателями на озере в 1 км от центра",
+                    "Закрытый спортманеж, поле с искусственной травой 28×51 м, киноконцертный зал",
+                    "Водолечебные ванны и души, физиотерапия, массаж, ЛФК, 5 сеансов аромафитотерапии",
+                    "Секции зумбы, пилатеса, скандинавской ходьбы и творческие кружки"
+                ]
+            },
+            kolos: {
+                title: "ДРОЦ «Колос» (Брестская обл.)",
+                specs: [
+                    "<strong>Цена:</strong> 3 170 ₽/сут (индивид.) | 3 328 ₽/сут (группы 1+20)",
+                    "<strong>Возраст и смены:</strong> 6–17 лет, 3 см. (21 дн.) или 4 см. (18 дн.), до 80 чел.",
+                    "<strong>График (21 дн.):</strong> 16.06–06.07, 09.07–29.07, 01.08–21.08.2027",
+                    "<strong>Питание и проживание:</strong> 5-разовое; блоки 2+4 с удобствами и балконами"
+                ],
+                listTitle: "Инфраструктура и лечение:",
+                list: [
+                    "Открытый теплый бассейн, сауна с бассейном, спортзал 26×14, стадион, лазертаг",
+                    "Галотерапия (5 сеансов) и кислородный коктейль (5 порций) включены в путевку",
+                    "Экскурсии в Брестскую крепость, Беловежскую пущу, Ружаны и аквапарк в Кобрине",
+                    "Трансфер от ж/д станции Жабинка включен в стоимость"
+                ]
+            },
+            praleska: {
+                title: "ДРОЦ «Пралеска» (Гомельская обл.)",
+                specs: [
+                    "<strong>Цена:</strong> 3 060 ₽/сут (индивид.) | 3 213 ₽/сут (группы 1+20)",
+                    "<strong>Возраст и смены:</strong> 6–17 лет, 4 см. по 18 дн. + 1 см. 12 дн. (до 150 чел.)",
+                    "<strong>График 2027:</strong> 09.06–26.06, 27.06–14.07, 15.07–01.08, 02.08–19.08, 19.08–30.08",
+                    "<strong>Питание и проживание:</strong> 5-разовое; 3–4-местные номера и блоки с санузлом"
+                ],
+                listTitle: "Инфраструктура и лечение:",
+                list: [
+                    "Открытый (летний) и закрытый плавательные бассейны, рядом аквапарк",
+                    "Спортзал, футбольное поле, площадка с мягким покрытием, 21 уличный тренажер",
+                    "Круглосуточный медпост, физиотерапия, массаж, зубной фельдшер, 6 кружков",
+                    "Трансфер с вокзала г. Жлобина включен в стоимость путевки"
+                ]
+            },
+            sidelniki: {
+                title: "ДРОЦ «Сидельники» (Гомельская обл.)",
+                specs: [
+                    "<strong>Цена:</strong> 3 600 ₽/сут (индивид.) | 3 780 ₽/сут (группы 1+20)",
+                    "<strong>Возраст и смены:</strong> 6–17 лет, 5 смен по 18 дней (до 150 чел.)",
+                    "<strong>График 2027:</strong> 01.06–18.06, 20.06–07.07, 08.07–25.07, 26.07–12.08, 13.08–30.08",
+                    "<strong>Питание и проживание:</strong> 5-разовое (диеты Б, П, М, Н); номера 2–4 чел. с санузлом"
+                ],
+                listTitle: "Инфраструктура и лечение:",
+                list: [
+                    "Крытый бассейн 12×5 м, спортзал 36×18 (6 колец), тренажерный и теннисный залы",
+                    "Грязе- и теплолечение, галотерапия, электросон, стоматология, УЗИ, фитобар",
+                    "Все корпуса соединены крытой надземной галереей, на территории музей «Белорусская хатка»"
+                ]
+            },
+            romantika: {
+                title: "ДРОЦ «Романтика-Люкс» (Гомельская обл.)",
+                specs: [
+                    "<strong>Цена:</strong> 2 095 / 2 520 ₽/сут | 2 646 ₽/сут (группы 1+20)",
+                    "<strong>Возраст и смены:</strong> 6–17 лет, 4 смены по 18 дней (150–250 чел.)",
+                    "<strong>График 2027:</strong> 14.06–02.07, 04.07–22.07, 23.07–10.08, 11.08–29.08",
+                    "<strong>Питание и проживание:</strong> 6-разовое; 2–3-местные номера или блоки по 4 чел."
+                ],
+                listTitle: "Инфраструктура и лечение:",
+                list: [
+                    "Отдельный 2-этажный лечебный корпус: галотерапия, водолечебница, массаж, фитобар",
+                    "Сауна с бассейном, спортзал, площадки с резиновым покрытием, пляж на р. Сож в 550 м",
+                    "Пенные вечеринки, лазертаг, VR-очки, выезды в театры и музеи Гомеля"
+                ]
+            },
+            sluch: {
+                title: "Санаторий «Случь» (Минская обл.)",
+                specs: [
+                    "<strong>Цена:</strong> 4 140 ₽/сут (индивид.) | 4 347 ₽/сут (группы 1+20)",
+                    "<strong>Возраст и смены:</strong> 6–17 лет, 3 смены по 18 дней (до 60 чел.)",
+                    "<strong>График 2027:</strong> 12.06–30.06, 02.07–20.07, 22.07–09.08.2027",
+                    "<strong>Питание и проживание:</strong> 6-разовое; блоки из двух 4-местных комнат с душем"
+                ],
+                listTitle: "Инфраструктура и лечение:",
+                list: [
+                    "Закрытый бассейн 11,6 м, ЛФК в бассейне, спелеоклиматолечение, фиточай в путевке",
+                    "Спортзал 14×10, футбольное поле 60×40, 6 волейбольных площадок, 12 столов тенниса",
+                    "4 круглосуточных медпоста, музыкальная и хореографическая студии"
+                ]
+            },
+            ptich: {
+                title: "ДРОЦ «Птичь» (Гомельская обл.)",
+                specs: [
+                    "<strong>Цена:</strong> 3 130 ₽/сут (индивид.) | 3 286 ₽/сут (группы 1+20)",
+                    "<strong>Возраст и смены:</strong> 6–17 лет, 3 смены по 21 дню (до 70 чел.)",
+                    "<strong>График 2027:</strong> 15.06–05.07, 07.07–27.07, 29.07–18.08.2027",
+                    "<strong>Питание и проживание:</strong> 5-разовое; блоки 3+3 и 2+4 с ванной и туалетом"
+                ],
+                listTitle: "Инфраструктура и лечение:",
+                list: [
+                    "ФОК с плавательным бассейном, теннисный корт, футбольное поле, пляжный футбол",
+                    "Галотерапия, ароматерапия, кислородный коктейль и минвода включены в путевку",
+                    "Экскурсии в Древний Туров, Нацпарк «Припятский», музей Деда Талаша и зоопарк"
+                ]
+            },
+            zhdanovichi: {
+                title: "ДРОЦ «Ждановичи» (Минский р-н)",
+                specs: [
+                    "<strong>Цена:</strong> 3 420 ₽/сут (индивид.) | 3 591 ₽/сут (группы 1+20)",
+                    "<strong>Возраст и смены:</strong> 8–16 лет, 4 смены по 21 дню (70–120 чел.)",
+                    "<strong>График 2027:</strong> 01.06–21.06, 24.06–14.07, 17.07–06.08, 09.08–29.08",
+                    "<strong>Питание и проживание:</strong> 6-разовое; блоки 3+3 со встроенным душем и санузлом"
+                ],
+                listTitle: "Инфраструктура и лечение:",
+                list: [
+                    "3 км от Минска, оборудованный пляж на водохранилище в шаговой доступности, рядом аквапарк",
+                    "Бассейн, хамам, сауна, водолечебница, физиотерапия, фитобар, круглосуточный врачебный пост",
+                    "Киноконцертный зал (357 мест), летний амфитеатр (250 мест), экскурсии по Минску и Хатыни"
+                ]
+            }
+        };
+    
+        document.querySelectorAll('[data-camp]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const key = btn.getAttribute('data-camp');
+                const data = campsFullData[key];
+                if (!data) return;
+    
+                document.getElementById('infoModalTitle').textContent = data.title;
+                document.getElementById('infoModalListTitle').textContent = data.listTitle;
+                document.getElementById('infoModalSpecs').innerHTML = data.specs.map(s => `<div class="spec-line">${s}</div>`).join('');
+                document.getElementById('infoModalList').innerHTML = data.list.map(i => `<li>${i}</li>`).join('');
+            document.getElementById('infoModal').classList.add('active');
+        });
+    });
+    </script>
+
+<script>
+    document.querySelectorAll('.card-slider').forEach(slider => {
+        const imgs = slider.querySelectorAll('.card-slide-img');
+        const prev = slider.querySelector('.prev');
+        const next = slider.querySelector('.next');
+        const counter = slider.querySelector('.card-photo-counter');
+        let idx = 0;
+    
+        function updateCardSlider(newIdx) {
+            imgs[idx].classList.remove('active');
+            idx = (newIdx + imgs.length) % imgs.length;
+            imgs[idx].classList.add('active');
+            if (counter) counter.textContent = `${idx + 1} / ${imgs.length}`;
+        }
+    
+        if (prev) prev.addEventListener('click', (e) => {
+            e.stopPropagation();
+            updateCardSlider(idx - 1);
+        });
+        if (next) next.addEventListener('click', (e) => {
+            e.stopPropagation();
+            updateCardSlider(idx + 1);
+        });
+    });
+    </script>
+    
+</body>
+</html>

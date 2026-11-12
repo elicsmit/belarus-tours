@@ -203,4 +203,35 @@ optionButtons.forEach(button => {
         }, 600);
     });
 });
+// 5. КАРУСЕЛЬ НА ГЛАВНОЙ СТРАНИЦЕ
+const slides = document.querySelectorAll('.hero-slide');
+const dots = document.querySelectorAll('.slider-dot');
+const prevSlideBtn = document.getElementById('prevSlide');
+const nextSlideBtn = document.getElementById('nextSlide');
+
+if (slides.length > 0) {
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach(s => s.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+        
+        currentSlide = (index + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+        if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+    }
+
+    if (prevSlideBtn) {
+        prevSlideBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+    }
+    if (nextSlideBtn) {
+        nextSlideBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+    }
+    dots.forEach((dot, idx) => {
+        dot.addEventListener('click', () => showSlide(idx));
+    });
+
+    // Автоматическая смена слайдов каждые 5 секунд
+    setInterval(() => showSlide(currentSlide + 1), 5000);
+}
 
