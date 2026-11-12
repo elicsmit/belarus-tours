@@ -459,3 +459,30 @@ opacity: 0; pointer-events: none; transform: translateY(20px); transition: all 0
 .card-slide-img {
     color: transparent; /* Прячет системный текст alt, если файл еще не добавлен */
 }
+.hero-slide::before {
+    display: none !important;
+}
+.sanatorium-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.sanatorium-card .card-image-wrap {
+    height: 280px !important;
+    min-height: 280px !important;
+    max-height: 280px !important;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+.sanatorium-card .card-slider,
+.sanatorium-card .card-slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sanatorium-card .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
