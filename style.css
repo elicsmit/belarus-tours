@@ -5,8 +5,8 @@
     --text-main: #1C2320;
     --text-muted: #606C66;
     --white: #FFFFFF;
-    --font-main: 'Inter', sans-serif;
-    --font-title: 'Playfair Display', serif;
+    --font-title: 'Cormorant Garamond', Georgia, serif;
+    --font-main: 'Manrope', sans-serif;
 }
 
 html {
