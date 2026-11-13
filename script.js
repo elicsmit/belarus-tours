@@ -235,3 +235,22 @@ if (slides.length > 0) {
     setInterval(() => showSlide(currentSlide + 1), 5000);
 }
 
+// БУРГЕР-МЕНЮ ДЛЯ ТЕЛЕФОНОВ И ПЛАНШЕТОВ
+document.addEventListener('DOMContentLoaded', () => {
+    const burgerBtn = document.getElementById('burgerBtn');
+    const mobileNav = document.getElementById('mobileNav');
+
+    if (burgerBtn && mobileNav) {
+        burgerBtn.addEventListener('click', () => {
+            burgerBtn.classList.toggle('active');
+            mobileNav.classList.toggle('open');
+        });
+
+        mobileNav.querySelectorAll('a, button').forEach(link => {
+            link.addEventListener('click', () => {
+                burgerBtn.classList.remove('active');
+                mobileNav.classList.remove('open');
+            });
+        });
+    }
+});

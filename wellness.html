@@ -17,13 +17,20 @@
             <span class="logo-icon"></span>
             FAMILY HOLIDAYS
         </a>
+
+        <button class="burger-btn" id="burgerBtn" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         
-        <nav class="nav">
-            <a href="kids.html" class="nav-link">Семейный отдых</a>
-            <a href="wellness.html" class="nav-link" style="color: var(--secondary);">Оздоровление</a>
+        <nav class="nav" id="mobileNav">
+            <a href="family.html" class="nav-link">Семейный отдых</a>
+            <a href="wellness.html" class="nav-link">Оздоровление</a>
             <a href="excursions.html" class="nav-link">Экскурсии</a>
             <a href="index.html#about" class="nav-link">О компании</a>
-            <a href="#contacts" class="nav-link">Контакты</a>
+            <a href="index.html#contacts" class="nav-link">Контакты</a>
+            <button class="callback-btn mobile-only-btn" onclick="document.getElementById('callbackModal').classList.add('active')">Заказать звонок</button>
         </nav>
 
         <div class="header-actions">
@@ -31,6 +38,7 @@
             <button class="callback-btn" id="openModal">Заказать звонок</button>
         </div>
     </header>
+
 
     <section class="page-banner" style="background-image: url('img/slide2.jpg');">
         <div class="container page-banner-content">

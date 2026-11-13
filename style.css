@@ -486,3 +486,153 @@ opacity: 0; pointer-events: none; transform: translateY(20px); transition: all 0
     justify-content: space-between;
     flex-grow: 1;
 }
+/* =========================================================
+   ЧИСТЫЕ СТИЛИ ШАПКИ И МЕНЮ (ДЕСКТОП + МОБИЛКА)
+   ========================================================= */
+
+   .logo,
+   .nav-link,
+   .phone,
+   .callback-btn {
+       white-space: nowrap !important;
+   }
+   
+   /* 1. ТОЛЬКО ДЛЯ КОМПЬЮТЕРА (экраны шире 1024px) */
+   @media (min-width: 1025px) {
+       .burger-btn,
+       .mobile-only-btn {
+           display: none !important;
+       }
+       .nav {
+           position: static !important;
+           transform: none !important;
+           opacity: 1 !important;
+           visibility: visible !important;
+           display: flex !important;
+           flex-direction: row !important;
+           align-items: center !important;
+           background: transparent !important;
+           box-shadow: none !important;
+           padding: 0 !important;
+           width: auto !important;
+       }
+   }
+   
+   /* 2. ТОЛЬКО ДЛЯ ТЕЛЕФОНОВ И ПЛАНШЕТОВ (экраны до 1024px) */
+   @media (max-width: 1024px) {
+       .header {
+           display: flex !important;
+           justify-content: space-between !important;
+           align-items: center !important;
+           flex-wrap: nowrap !important;
+           padding: 16px 20px !important;
+           height: 64px !important;
+           z-index: 2000 !important;
+       }
+       .header-actions {
+           display: none !important;
+       }
+       .burger-btn {
+           display: flex !important;
+           flex-direction: column !important;
+           justify-content: space-between !important;
+           width: 28px !important;
+           height: 20px !important;
+           background: transparent !important;
+           border: none !important;
+           cursor: pointer !important;
+           padding: 0 !important;
+           z-index: 2010 !important;
+       }
+       .burger-btn span {
+           display: block !important;
+           width: 100% !important;
+           height: 2.5px !important;
+           background-color: #FFFFFF !important;
+           border-radius: 2px !important;
+           transition: all 0.3s ease !important;
+       }
+       .burger-btn.active span:nth-child(1) {
+           transform: translateY(8.5px) rotate(45deg);
+       }
+       .burger-btn.active span:nth-child(2) {
+           opacity: 0;
+       }
+       .burger-btn.active span:nth-child(3) {
+           transform: translateY(-9px) rotate(-45deg);
+       }
+   
+       /* Компактная шторка справа */
+       .nav {
+           display: flex !important;
+           flex-direction: column !important;
+           position: fixed !important;
+           top: 64px !important;
+           right: 0 !important;
+           left: auto !important;
+           width: 280px !important;
+           max-width: 82vw !important;
+           height: auto !important;
+           max-height: calc(100vh - 64px) !important;
+           background-color: #1C2320 !important;
+           padding: 16px 20px 24px 20px !important;
+           gap: 4px !important;
+           border-left: 1px solid rgba(255, 255, 255, 0.12) !important;
+           border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+           border-bottom-left-radius: 16px !important;
+           box-shadow: -10px 15px 35px rgba(0, 0, 0, 0.55) !important;
+           transform: translate(110%, 0) !important;
+           opacity: 0 !important;
+           visibility: hidden !important;
+           transition: all 0.3s ease !important;
+           z-index: 2005 !important;
+           overflow-y: auto !important;
+       }
+       .nav.open {
+           transform: translate(0, 0) !important;
+           opacity: 1 !important;
+           visibility: visible !important;
+       }
+       .nav .nav-link {
+           display: block !important;
+           width: 100% !important;
+           font-size: 16px !important;
+           padding: 10px 0 !important;
+           border-bottom: 1px solid rgba(217, 160, 91, 0.22) !important;
+       }
+       .mobile-only-btn {
+           display: block !important;
+           width: 100% !important;
+           margin-top: 16px !important;
+           padding: 12px 16px !important;
+           background-color: var(--secondary) !important;
+           color: #1C2320 !important;
+           font-weight: 600 !important;
+           font-size: 14px !important;
+           border-radius: 8px !important;
+           text-align: center !important;
+           border: none !important;
+       }
+   }
+/* КОМПАКТНАЯ ВЫСОТА КАРУСЕЛИ НА ПЛАНШЕТАХ И ТЕЛЕФОНАХ */
+@media (max-width: 1024px) {
+    .hero.hero-slider {
+        height: 440px !important;
+        min-height: 440px !important;
+        margin-top: 64px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero.hero-slider {
+        height: 280px !important;
+        min-height: 280px !important;
+        margin-top: 64px !important;
+    }
+}
+/* ПЛОТНОЕ МЕЖСТРОЧНОЕ РАССТОЯНИЕ В ЗАГОЛОВКАХ */
+.section-title,
+h2.section-title {
+    line-height: 0.88 !important;
+}
+   
