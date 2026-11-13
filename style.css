@@ -635,4 +635,57 @@ opacity: 0; pointer-events: none; transform: translateY(20px); transition: all 0
 h2.section-title {
     line-height: 0.88 !important;
 }
-   
+   /* КОМПАКТНЫЕ КАРТОЧКИ НА ТЕЛЕФОНЕ */
+@media (max-width: 768px) {
+    .sanatorium-card .card-image-wrap,
+    .sanatorium-card .card-slider {
+        height: 170px !important;
+        min-height: 170px !important;
+        max-height: 170px !important;
+    }
+    .sanatorium-card .card-content {
+        padding: 16px !important;
+        gap: 10px !important;
+    }
+    .sanatorium-card .card-title {
+        font-size: 20px !important;
+        line-height: 1.15 !important;
+        margin-bottom: 4px !important;
+    }
+    .sanatorium-card .card-text {
+        font-size: 14px !important;
+        margin-bottom: 12px !important;
+    }
+    .sanatorium-card .more-btn {
+        padding: 10px 16px !important;
+        font-size: 14px !important;
+    }
+}
+/* КОМПАКТНЫЕ КАРТОЧКИ НА ТЕЛЕФОНЕ ДЛЯ ВСЕХ СТРАНИЦ */
+@media (max-width: 768px) {
+    .card .card-image-wrap,
+    .card .card-slider {
+        height: 170px !important;
+        min-height: 170px !important;
+        max-height: 170px !important;
+        background: linear-gradient(135deg, #1F4E3D 0%, #143328 100%);
+    }
+    .card .card-content {
+        padding: 16px !important;
+        gap: 10px !important;
+    }
+    .card .card-title {
+        font-size: 20px !important;
+        line-height: 1.15 !important;
+        margin-bottom: 6px !important;
+    }
+    .card .card-text {
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 12px !important;
+    }
+    .card .more-btn {
+        padding: 10px 16px !important;
+        font-size: 14px !important;
+    }
+}
