@@ -689,3 +689,31 @@ h2.section-title {
         font-size: 14px !important;
     }
 }
+/* ЖЕСТКИЙ ФИКС РАЗМЕРА ЛОГОТИПА И ОТСТУПОВ В ШАПКЕ */
+.header .logo img,
+.logo-img {
+    height: 46px !important;
+    max-height: 46px !important;
+    width: auto !important;
+    border-radius: 12px !important; /* Скругляет белые углы, пока фон не вырезан */
+    display: block !important;
+}
+
+/* Разделяем меню и блок с телефоном */
+.header-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+    margin-left: 24px !important;
+}
+
+@media (max-width: 1024px) {
+    .header .logo img,
+    .logo-img {
+        height: 38px !important;
+        max-height: 38px !important;
+    }
+    .header-actions {
+        display: none !important;
+    }
+}
