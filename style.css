@@ -721,3 +721,66 @@ h2.section-title {
 .footer {
     background-color: #0D2137 !important;
 }
+/* 1. КОНТРАСТНАЯ СВЕТЛАЯ ШАПКА ПОД СИНИЙ ЛОГОТИП */
+.header {
+    background-color: #F4F7FA !important; /* Светлый ледяной фон, на котором синий логотип смотрится идеально */
+    border-bottom: 1px solid #DCE4EC !important;
+    box-shadow: 0 2px 12px rgba(16, 42, 67, 0.08) !important;
+}
+.header .nav-link,
+.header .phone {
+    color: #102A43 !important; /* Темно-синий текст меню и телефона */
+}
+.header .nav-link:hover {
+    color: #1F5C99 !important;
+}
+.header .burger-btn span {
+    background-color: #102A43 !important; /* Темно-синие полоски бургер-меню на телефоне */
+}
+
+/* 2. УБИРАЕМ ВСЕ РАМКИ И ТЕМНЫЕ ПОЛОСЫ ВОКРУГ КАРУСЕЛИ */
+.hero.hero-slider {
+    padding: 0 !important;
+    margin-top: 64px !important; /* Ровно под высотой шапки без зазора */
+    border: none !important;
+    border-radius: 0 !important;
+    width: 100vw !important;
+    max-width: 100% !important;
+}
+.hero-slides,
+.hero-slide {
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    background-size: cover !important;
+    background-position: center center !important;
+}
+
+/* На телефоне картинка закрывает весь первый экран от шапки до низа */
+@media (max-width: 768px) {
+    .hero.hero-slider {
+        height: calc(100vh - 64px) !important;
+        min-height: 480px !important;
+    }
+    /* Выпадающее мобильное меню тоже в светло-синей гамме */
+    .nav {
+        background-color: #F4F7FA !important;
+        border-left: 1px solid #DCE4EC !important;
+        border-bottom: 1px solid #DCE4EC !important;
+    }
+}
+/* ЯРКАЯ КНОПКА ЗАКАЗА ЗВОНКА НА СВЕТЛОЙ ШАПКЕ */
+.header .callback-btn {
+    background-color: #102A43 !important;
+    color: #FFFFFF !important;
+    padding: 10px 20px !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    border: none !important;
+    cursor: pointer !important;
+    transition: background-color 0.2s ease !important;
+}
+.header .callback-btn:hover {
+    background-color: #1F5C99 !important;
+}
