@@ -1,5 +1,5 @@
 :root {
-    --primary: #1F4E3D;
+    --primary: #132F4C; 
     --secondary: #D9A05B;
     --bg-light: #F9F8F6;
     --text-main: #1C2320;
@@ -716,4 +716,8 @@ h2.section-title {
     .header-actions {
         display: none !important;
     }
+}
+.header,
+.footer {
+    background-color: #0D2137 !important;
 }
