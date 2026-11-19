@@ -846,3 +846,13 @@ h2.section-title {
         margin-top: 0 !important;
     }
 }
+
+/* НОРМАЛЬНАЯ ШИРИНА ОКНА ОНЛАЙН-КОНСУЛЬТАНТА */
+.assistant-chat {
+    width: 320px !important;
+    max-width: 90vw !important;
+}
+.assistant-chat .msg {
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+}
