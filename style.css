@@ -1010,3 +1010,55 @@ h2.section-title {
 .modal-form button {
     border-radius: 12px !important;
 }
+/* 1. ЧИТАЕМАЯ ШАПКА ПРИ ПРОКРУТКЕ НА ЛЮБОМ ФОНЕ */
+.footer {
+    padding: 40px 0 !important;
+}
+
+.footer-container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 32px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 24px !important;
+}
+
+.footer-brand {
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+}
+
+.footer-brand img,
+.footer-logo-img {
+    height: 56px !important;
+    width: auto !important;
+    min-width: auto !important;
+    max-width: none !important;
+    border-radius: 50% !important;
+    object-fit: contain !important;
+    margin: 0 !important;
+}
+
+
+.footer-contacts {
+    text-align: right !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+    .footer-brand {
+        flex-direction: column !important;
+    }
+    .footer-contacts {
+        text-align: center !important;
+        white-space: normal !important;
+    }
+}
