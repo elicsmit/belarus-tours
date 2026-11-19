@@ -784,3 +784,65 @@ h2.section-title {
 .header .callback-btn:hover {
     background-color: #1F5C99 !important;
 }
+/* =========================================================
+   ПРОЗРАЧНАЯ ШАПКА ПОВЕРХ ФОТО + ОТДАЛЕНИЕ КАРТИНОК В СЛАЙДЕРЕ
+   ========================================================= */
+
+/* 1. Делаем шапку полностью прозрачной поверх фотографии */
+.header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    background: linear-gradient(180deg, rgba(16, 42, 67, 0.72) 0%, rgba(16, 42, 67, 0) 100%) !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    z-index: 2000 !important;
+}
+
+/* Возвращаем белый цвет текста и бургер-кнопки, чтобы четко читалось поверх фото */
+.header .nav-link,
+.header .phone {
+    color: #FFFFFF !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6) !important;
+}
+.header .nav-link:hover {
+    color: var(--secondary) !important;
+}
+.header .burger-btn span {
+    background-color: #FFFFFF !important;
+}
+
+/* 2. Поднимаем карусель в самый верх (убираем отступ под шапку) и отдаляем фото */
+.hero.hero-slider {
+    margin-top: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 16 / 9 !important; /* Сохраняет пропорции фото, чтобы не обрезать головы */
+    max-height: 92vh !important;
+    background-color: #102A43 !important;
+}
+
+.hero-slide {
+    background-size: cover !important;
+    background-position: center top !important; /* Привязываем к верху, чтобы головы никогда не резались */
+}
+
+/* Адаптив для мобильного меню при прозрачной шапке */
+@media (max-width: 1024px) {
+    .nav {
+        background-color: rgba(16, 42, 67, 0.96) !important;
+        backdrop-filter: blur(8px) !important;
+        border-left: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero.hero-slider {
+        aspect-ratio: 16 / 10 !important;
+        height: auto !important;
+        min-height: 240px !important;
+        margin-top: 0 !important;
+    }
+}
