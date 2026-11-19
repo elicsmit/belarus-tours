@@ -856,3 +856,31 @@ h2.section-title {
     word-break: normal !important;
     overflow-wrap: break-word !important;
 }
+/* УБИРАЕМ ОГРОМНЫЕ ПУСТЫЕ ДЫРЫ ВНУТРИ КАРТОЧЕК НА ГЛАВНОЙ */
+.programs .card {
+    height: auto !important;
+    min-height: 0 !important;
+}
+
+.programs .card-content {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    padding: 24px !important;
+    height: auto !important;
+    min-height: 0 !important;
+}
+
+.programs .card-title {
+    margin: 0 !important;
+}
+
+.programs .card-text {
+    margin: 0 0 8px 0 !important;
+}
+
+.programs .more-btn {
+    margin-top: 0 !important;
+}
