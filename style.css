@@ -1204,3 +1204,25 @@ h2.section-title {
         padding: 64px 16px 24px 16px !important;
     }
 }
+/* УСИЛЕННОЕ ЗАТЕМНЕНИЕ ВИДЕО ДЛЯ ЧЕТКОЙ ЧИТАЕМОСТИ ТЕКСТА */
+.hero-slide::after {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: rgba(16, 42, 67, 0.65) !important; /* Темная подложка поверх любого светлого видео */
+    z-index: 2 !important;
+    pointer-events: none !important;
+}
+
+@media (max-width: 768px) {
+    .hero.hero-slider,
+    .hero.hero-slider .hero-slides,
+    .hero.hero-slider .hero-slide.active {
+        height: 580px !important;
+        min-height: 580px !important;
+        max-height: 580px !important;
+    }
+    .hero.hero-slider .hero-content {
+        padding: 64px 16px 24px 16px !important;
+    }
+}
