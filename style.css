@@ -1226,3 +1226,10 @@ h2.section-title {
         padding: 64px 16px 24px 16px !important;
     }
 }
+.hero-slide::after {
+    background: rgba(16, 42, 67, 0.42) !important;
+}
+
+.hero-content {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75) !important;
+}
