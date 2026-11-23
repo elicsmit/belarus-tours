@@ -1196,11 +1196,11 @@ h2.section-title {
     .hero.hero-slider,
     .hero.hero-slider .hero-slides,
     .hero.hero-slider .hero-slide.active {
-        height: auto !important;
-        min-height: 0 !important;
-        max-height: none !important;
+        height: 520px !important;
+        min-height: 520px !important;
+        max-height: 520px !important;
     }
     .hero.hero-slider .hero-content {
-        padding: 76px 16px 76px 16px !important;
+        padding: 64px 16px 24px 16px !important;
     }
 }
